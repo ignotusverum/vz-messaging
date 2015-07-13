@@ -69,6 +69,8 @@
                                                                              target:self
                                                                              action:@selector(receiveMessagePressed:)];
 
+    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Book" size:14.0];
+    
     /**
      *  Register custom menu actions for cells.
      */
@@ -478,6 +480,7 @@
     /**
      *  Don't specify attributes to use the defaults.
      */
+    
     return [[NSAttributedString alloc] initWithString:message.senderDisplayName];
 }
 
@@ -499,6 +502,8 @@
      *  Override point for customizing cells
      */
     JSQMessagesCollectionViewCell *cell = (JSQMessagesCollectionViewCell *)[super collectionView:collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.textView.font = [UIFont fontWithName:@"Gotham-Book" size:14.0];
     
     /**
      *  Configure almost *anything* on the cell
@@ -525,8 +530,11 @@
             cell.textView.textColor = [UIColor whiteColor];
         }
         
+//        NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
+//        paragrahStyle.lineSpacing = 20;
+        
         cell.textView.linkTextAttributes = @{ NSForegroundColorAttributeName : cell.textView.textColor,
-                                              NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid) };
+                                              NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid)};
     }
     
     return cell;

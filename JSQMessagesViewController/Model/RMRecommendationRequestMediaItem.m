@@ -60,6 +60,29 @@
         CGSize size = CGSizeMake(200.0f, 100.0f);
         UIView * recommendationRequestView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
         recommendationRequestView.backgroundColor = [UIColor jsq_messageBubbleLightGrayColor];
+        
+        UILabel * label = [UILabel new];
+        label.numberOfLines = 0;
+        label.frame = CGRectMake(20, 0, size.width, size.height - 30.0f);
+        label.textAlignment = NSTextAlignmentLeft;
+        label.font = [UIFont fontWithName:@"Futura" size:12.0];
+        label.text = self.recommendationRequestString;
+        [recommendationRequestView addSubview:label];
+        
+        UIButton * leftButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0, label.frame.origin.y + label.frame.size.height - 10, 80, 20)];
+        leftButton.backgroundColor = [UIColor lightGrayColor];
+        [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        leftButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:11.0];
+        [leftButton setTitle:@"Yes, show me" forState:UIControlStateNormal];
+        [recommendationRequestView addSubview:leftButton];
+        
+        UIButton * rightButton = [[UIButton alloc] initWithFrame:CGRectMake(leftButton.frame.origin.x + leftButton.frame.size.width + 5, label.frame.origin.y + label.frame.size.height - 10, 80, 20)];
+        rightButton.backgroundColor = [UIColor lightGrayColor];
+        [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        rightButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:11.0];
+        [rightButton setTitle:@"No,not now" forState:UIControlStateNormal];
+        [recommendationRequestView addSubview:rightButton];
+        
         [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:recommendationRequestView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
         self.recommendationRequestView = recommendationRequestView;
     }
@@ -73,7 +96,7 @@
     if (self.cachedPlaceholderView == nil) {
         CGSize size = CGSizeMake(200.0f, 100.0f);
         
-        UIView *view = [JSQMessagesMediaPlaceholderView new];
+        UIView *view = [JSQMessagesMediaPlaceholderView viewWithActivityIndicator];
         view.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
         
         [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:view isOutgoing:self.appliesMediaViewMaskAsOutgoing];

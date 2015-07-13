@@ -108,6 +108,8 @@
 		94A4FA20C2FBD0D62614D5A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E6750B77E8A7042BA0754B /* libPods.a */; };
 		F53750581B5416530090CA88 /* RMRecommendationMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F53750571B5416530090CA88 /* RMRecommendationMediaItem.m */; };
 		F537505B1B54171F0090CA88 /* RMRecommendationRequestMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F537505A1B54171F0090CA88 /* RMRecommendationRequestMediaItem.m */; };
+		F53750661B5477560090CA88 /* GothamBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = F53750651B5477560090CA88 /* GothamBook.otf */; };
+		F53750681B5479140090CA88 /* GothamMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F53750671B5479140090CA88 /* GothamMedium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +274,8 @@
 		F53750571B5416530090CA88 /* RMRecommendationMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRecommendationMediaItem.m; sourceTree = "<group>"; };
 		F53750591B54171F0090CA88 /* RMRecommendationRequestMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRecommendationRequestMediaItem.h; sourceTree = "<group>"; };
 		F537505A1B54171F0090CA88 /* RMRecommendationRequestMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRecommendationRequestMediaItem.m; sourceTree = "<group>"; };
+		F53750651B5477560090CA88 /* GothamBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBook.otf; sourceTree = "<group>"; };
+		F53750671B5479140090CA88 /* GothamMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.otf; sourceTree = "<group>"; };
 		FC5C727E4CCDA2B95A7BA30C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -523,6 +527,8 @@
 		88A25F8919D8E01A00924534 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F53750651B5477560090CA88 /* GothamBook.otf */,
+				F53750671B5479140090CA88 /* GothamMedium.otf */,
 				883C11761A09FB100092A16D /* JSQMessagesCellTextView.h */,
 				883C11771A09FB100092A16D /* JSQMessagesCellTextView.m */,
 				88A25F8A19D8E01A00924534 /* JSQMessagesCollectionView.h */,
@@ -726,11 +732,13 @@
 			files = (
 				886C33FF19F45E30006B4997 /* JSQMessagesViewController.podspec in Resources */,
 				8861666D19F492B70025B958 /* JSQMessagesAssets.bundle in Resources */,
+				F53750661B5477560090CA88 /* GothamBook.otf in Resources */,
 				88A25FCF19D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
 				88A25FCD19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				88A25FD619D8E01A00924534 /* JSQMessagesToolbarContentView.xib in Resources */,
 				88A25F3A19D8DF2500924534 /* Images.xcassets in Resources */,
 				88A25FBC19D8E01A00924534 /* JSQMessagesViewController.xib in Resources */,
+				F53750681B5479140090CA88 /* GothamMedium.otf in Resources */,
 				88A25FD819D8E01A00924534 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				88A25F3919D8DF2500924534 /* Main.storyboard in Resources */,
 				88A25FD419D8E01A00924534 /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
