@@ -33,6 +33,8 @@
 
 #import "UIImage+JSQMessages.h"
 
+#import "RMRecommendationRequestMediaItem.h"
+
 
 const CGFloat kJSQMessagesCollectionViewCellLabelHeightDefault = 20.0f;
 const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
@@ -443,7 +445,13 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
     CGSize finalSize = CGSizeZero;
     
     if ([messageItem isMediaMessage]) {
-        finalSize = [[messageItem media] mediaViewDisplaySize];
+        
+        if ([messageItem.media isKindOfClass:[RMRecommendationRequestMediaItem class]]) {
+            finalSize = CGSizeMake(200.0f, 100.0f);
+        }
+        else {
+            finalSize = [[messageItem media] mediaViewDisplaySize];
+        }
     }
     else {
         CGSize avatarSize = [self jsq_avatarSizeForIndexPath:indexPath];

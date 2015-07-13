@@ -24,8 +24,6 @@
 
 @interface JSQMediaItem ()
 
-@property (strong, nonatomic) UIView *cachedPlaceholderView;
-
 @end
 
 
@@ -97,6 +95,7 @@
 {
     if (self.cachedPlaceholderView == nil) {
         CGSize size = [self mediaViewDisplaySize];
+        
         UIView *view = [JSQMessagesMediaPlaceholderView viewWithActivityIndicator];
         view.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
         [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:view isOutgoing:self.appliesMediaViewMaskAsOutgoing];

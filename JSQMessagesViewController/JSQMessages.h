@@ -46,6 +46,12 @@
 #import "JSQLocationMediaItem.h"
 #import "JSQVideoMediaItem.h"
 
+// update
+#import "RMRecommendationMediaItem.h"
+#import "RMRecommendationRequestMediaItem.h"
+
+//
+
 #import "JSQMessagesBubbleImage.h"
 #import "JSQMessagesAvatarImage.h"
 

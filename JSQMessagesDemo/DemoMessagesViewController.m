@@ -215,7 +215,19 @@
                 
                 newMediaData = videoItemCopy;
             }
+            else if ([copyMediaData isKindOfClass:[RMRecommendationRequestMediaItem class]]) {
+                RMRecommendationRequestMediaItem * recommendationItemCopy = [((RMRecommendationRequestMediaItem *)copyMediaData) copy];
+                recommendationItemCopy.appliesMediaViewMaskAsOutgoing = NO;
+
+                newMediaAttachmentCopy = [recommendationItemCopy.recommendationRequestString copy];
+                
+                recommendationItemCopy.recommendationRequestString = nil;
+                
+                newMediaData = recommendationItemCopy;
+                
+            }
             else {
+                // add recommendations here
                 NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
             }
             
@@ -271,7 +283,12 @@
                     ((JSQVideoMediaItem *)newMediaData).isReadyToPlay = YES;
                     [self.collectionView reloadData];
                 }
+                else if ([newMediaData isKindOfClass:[RMRecommendationRequestMediaItem class]]) {
+                    ((RMRecommendationRequestMediaItem *)newMediaData).recommendationRequestString = newMediaAttachmentCopy;
+                    [self.collectionView reloadData];
+                }
                 else {
+                    // add recommendations here
                     NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
                 }
                 

@@ -85,7 +85,7 @@
         JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
         
         self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
-        self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
+        self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleBlueColor]];
     }
     
     return self;
@@ -132,6 +132,8 @@
     
     [self addPhotoMediaMessage];
     
+    [self addRecommendationRequestMessage];
+    
     /**
      *  Setting to load extra messages for testing/demo
      */
@@ -164,6 +166,18 @@
                                                          media:photoItem];
     [self.messages addObject:photoMessage];
 }
+
+
+- (void)addRecommendationRequestMessage
+{
+    RMRecommendationRequestMediaItem * recommendationRequest = [[RMRecommendationRequestMediaItem alloc] initWithString:@"May i recommend some other restaurants you might like?"];
+    JSQMessage * recommendationRequestMessage = [JSQMessage messageWithSenderId:kJSQDemoAvatarIdSquires
+                                                   displayName:kJSQDemoAvatarDisplayNameSquires
+                                                         media:recommendationRequest];
+    
+    [self.messages addObject:recommendationRequestMessage];
+}
+
 
 - (void)addLocationMediaMessageCompletion:(JSQLocationMediaItemCompletionBlock)completion
 {

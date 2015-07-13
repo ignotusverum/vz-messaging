@@ -40,6 +40,10 @@
  */
 @property (assign, nonatomic) BOOL appliesMediaViewMaskAsOutgoing;
 
+
+@property (strong, nonatomic) UIView *cachedPlaceholderView;
+
+
 /**
  *  Initializes and returns a media item with the specified value for maskAsOutgoing.
  *
@@ -54,5 +58,7 @@
  *  Clears any media view or media placeholder view that the item has cached.
  */
 - (void)clearCachedMediaViews;
+
+- (UIView *)mediaPlaceholderView;
 
 @end
