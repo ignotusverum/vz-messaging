@@ -69,7 +69,7 @@
                                                                              target:self
                                                                              action:@selector(receiveMessagePressed:)];
 
-    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Book" size:14.0];
+    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Book" size:15.0];
     
     /**
      *  Register custom menu actions for cells.
