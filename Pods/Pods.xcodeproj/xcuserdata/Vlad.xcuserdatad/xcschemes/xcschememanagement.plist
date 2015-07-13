@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-JSQMessagesTests-OCMock.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-JSQMessagesTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5EEE60E63C428673AAB88942</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA7C50204863FBCA70862CB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCE098871A7B432A99EA0B7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4FABEF2F5BD5E559AE0DD0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
