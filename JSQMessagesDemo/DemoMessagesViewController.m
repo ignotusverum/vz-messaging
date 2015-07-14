@@ -38,6 +38,8 @@
     
     self.title = @"JSQMessages";
     
+    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Medium" size:14.0];
+    
     /**
      *  You MUST set your senderId and display name
      */
@@ -68,8 +70,6 @@
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(receiveMessagePressed:)];
-
-    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Book" size:15.0];
     
     /**
      *  Register custom menu actions for cells.
@@ -503,8 +503,6 @@
      */
     JSQMessagesCollectionViewCell *cell = (JSQMessagesCollectionViewCell *)[super collectionView:collectionView cellForItemAtIndexPath:indexPath];
     
-    cell.textView.font = [UIFont fontWithName:@"Gotham-Book" size:14.0];
-    
     /**
      *  Configure almost *anything* on the cell
      *
@@ -529,9 +527,6 @@
         else {
             cell.textView.textColor = [UIColor whiteColor];
         }
-        
-//        NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
-//        paragrahStyle.lineSpacing = 20;
         
         cell.textView.linkTextAttributes = @{ NSForegroundColorAttributeName : cell.textView.textColor,
                                               NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid)};
