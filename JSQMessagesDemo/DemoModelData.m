@@ -72,7 +72,7 @@
          */
         JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
         
-        self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
+        self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor colorWithRed:(242.0/255.0) green:(242.0/255.0) blue:(242.0/255.0) alpha:1.0]];
         self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleBlueColor]];
     }
     
@@ -117,6 +117,8 @@
                                                      date:[NSDate date]
                                                      text:@"My board"],
                      nil];
+    
+    [self addRecommendationMessage];
     
     [self addRecommendationRequestMessage];
     
@@ -163,6 +165,19 @@
     
     [self.messages addObject:recommendationRequestMessage];
 }
+
+
+- (void)addRecommendationMessage
+{
+    RMRecommendationMediaItem * recommendation = [[RMRecommendationMediaItem alloc] initWithString:@"ABC Kitchen"];
+    
+    JSQMessage * recommendationRequestMessage = [JSQMessage messageWithSenderId:kJSQDemoAvatarIdSquires
+                                                                    displayName:kJSQDemoAvatarDisplayNameSquires
+                                                                          media:recommendation];
+    
+    [self.messages addObject:recommendationRequestMessage];
+}
+
 
 
 - (void)addLocationMediaMessageCompletion:(JSQLocationMediaItemCompletionBlock)completion

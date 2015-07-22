@@ -38,7 +38,7 @@
     
     self.title = @"JSQMessages";
     
-    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Medium" size:14.0];
+    self.collectionView.collectionViewLayout.messageBubbleFont = [UIFont fontWithName:@"Gotham-Book" size:14.0];
     
     /**
      *  You MUST set your senderId and display name

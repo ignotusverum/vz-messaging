@@ -33,6 +33,7 @@
 
 #import "UIImage+JSQMessages.h"
 
+#import "RMRecommendationMediaItem.h"
 #import "RMRecommendationRequestMediaItem.h"
 
 
@@ -447,7 +448,10 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
     if ([messageItem isMediaMessage]) {
         
         if ([messageItem.media isKindOfClass:[RMRecommendationRequestMediaItem class]]) {
-            finalSize = CGSizeMake(200.0f, 100.0f);
+            finalSize = CGSizeMake(200.0f, 90.0f);
+        }
+        else if ([messageItem.media isKindOfClass:[RMRecommendationMediaItem class]]) {
+            finalSize = CGSizeMake(200.0f, 200.0l);
         }
         else {
             finalSize = [[messageItem media] mediaViewDisplaySize];

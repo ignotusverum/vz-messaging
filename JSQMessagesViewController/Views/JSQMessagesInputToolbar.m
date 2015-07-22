@@ -26,6 +26,8 @@
 #import "UIImage+JSQMessages.h"
 #import "UIView+JSQMessages.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesInputToolbarKeyValueObservingContext;
 
 
@@ -70,6 +72,11 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     [self jsq_addObservers];
 
     self.contentView.leftBarButtonItem = [JSQMessagesToolbarButtonFactory defaultAccessoryButtonItem];
+    
+    self.contentView.leftBarButtonItem.layer.cornerRadius = 32;
+    self.contentView.leftBarButtonItem.layer.borderWidth = 0.2;
+    self.contentView.leftBarButtonItem.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     self.contentView.rightBarButtonItem = [JSQMessagesToolbarButtonFactory defaultSendButtonItem];
 
     [self toggleSendButtonEnabled];

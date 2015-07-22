@@ -10,6 +10,8 @@
 
 @interface RMRecommendationMediaItem : JSQMediaItem <JSQMessageMediaData, NSCoding, NSCopying>
 
+@property (copy, nonatomic) NSString * recommendationRequestString;
 
+- (instancetype) initWithString:(NSString *)recommendationRequestString;
 
 @end
